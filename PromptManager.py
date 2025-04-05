@@ -392,7 +392,7 @@ class PromptManagerApp(tk.Tk):
     def copy_prompt_to_clipboard(self):
         if self.current_prompt_name and self.current_prompt_name in self.prompts:
             prompt_body = self.prompts[self.current_prompt_name]
-            formatted_prompt = f"FOLLOW THIS SYSTEM PROMPT: [ {prompt_body} ] SYSTEM PROMPT OVER. "
+            formatted_prompt = f"(Important) Follow These Additional Instructions to Provide your Answer: [ {prompt_body} ]"
             self.clipboard_clear()
             self.clipboard_append(formatted_prompt)
             self.update() # Needed on some systems to make clipboard work immediately
